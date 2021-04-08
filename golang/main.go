@@ -2,10 +2,13 @@ package main
 
 import (
 	"fmt"
+	"gitee/learn/golang/algorithm"
 )
 
 func main() {
-	var a uint = 1
-	var b uint = 2
-	fmt.Println(a - b)
+	dln := algorithm.NewDouleListNode()
+	for i := 0; i < 10; i++ {
+		dln.PushHead(fmt.Sprintf("%d", i), i)
+	}
+	algorithm.Print(dln)
 }
