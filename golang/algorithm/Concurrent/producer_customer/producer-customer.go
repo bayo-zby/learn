@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 /*生产者-消费者模型
@@ -25,7 +26,7 @@ func produce(ch chan struct{}) {
 		ch <- struct{}{}
 		fmt.Printf("产品入库，当前数量：%d\n", len(ch))
 	}
-	mu <- struct{}{}
+
 }
 
 // 消费者
@@ -33,6 +34,6 @@ func custome(ch chan struct{}) {
 	for {
 		<-ch
 		fmt.Printf("产品出库，当前数量：%d\n", len(ch))
+		time.Sleep(time.Second)
 	}
-
 }

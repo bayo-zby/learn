@@ -1,14 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"gitee/learn/golang/algorithm"
-)
+import "fmt"
 
 func main() {
-	dln := algorithm.NewDouleListNode()
-	for i := 0; i < 10; i++ {
-		dln.PushHead(fmt.Sprintf("%d", i), i)
-	}
-	algorithm.Print(dln)
+	var a int8 = -1
+	var b int8 = -128
+	fmt.Println(b / a)
 }
