@@ -2,7 +2,7 @@ package cache
 
 import (
 	"errors"
-	"gitee/learn/golang/algorithm"
+	"learn/golang/algorithm"
 )
 
 type FIFOcache struct {

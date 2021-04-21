@@ -1,6 +1,6 @@
 package cache
 
-import "gitee/learn/golang/algorithm"
+import "learn/golang/algorithm"
 
 type LRUcache struct {
 	Capacity int
