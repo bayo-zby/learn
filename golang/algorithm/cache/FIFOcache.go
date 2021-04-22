@@ -2,14 +2,14 @@ package cache
 
 import (
 	"errors"
-	"gitee/learn/golang/algorithm"
+	"gitee/learn/golang/algorithm/dataStruct"
 )
 
 type FIFOcache struct {
 	size     int
 	capacity int // 缓存容量和链表相同
 	m        map[string]int
-	dln      *algorithm.DoubleListNode
+	dln      *dataStruct.DoubleListNode
 }
 
 func NewFIFO(c int) *FIFOcache {
@@ -19,7 +19,7 @@ func NewFIFO(c int) *FIFOcache {
 	return &FIFOcache{
 		// 附上容量值
 		capacity: c,
-		dln:      &algorithm.DoubleListNode{Capacity: c},
+		dln:      &dataStruct.DoubleListNode{Capacity: c},
 	}
 }
 

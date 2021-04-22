@@ -1,10 +1,10 @@
 package cache
 
-import "gitee/learn/golang/algorithm"
+import "gitee/learn/golang/algorithm/dataStruct"
 
 type LRUcache struct {
 	Capacity int
-	List     *algorithm.DoubleListNode
+	List     *dataStruct.DoubleListNode
 }
 
 /*
