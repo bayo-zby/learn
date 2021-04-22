@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitee/learn/golang/leetcode"
+	"learn/golang/leetcode"
 )
 
 func main() {
