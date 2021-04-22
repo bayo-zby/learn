@@ -5,15 +5,22 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/gocolly/colly"
 )
+
+type fileInf struct {
+	title    string
+	filename string
+	imgUrl   string
+}
 
 func main() {
 	c1 := colly.NewCollector(
 		colly.AllowedDomains("www.junmeitu.com"),
 		colly.AllowURLRevisit(),
-		colly.Async(false),
+		colly.Async(true),
 		colly.UserAgent(`Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4464.0 Safari/537.36 Edg/91.0.852.0`),
 	)
 
@@ -31,11 +38,9 @@ func main() {
 	c1.OnHTML(`div.pic-list > ul.clearfix`, func(e *colly.HTMLElement) {
 		e.ForEach("li", func(i int, item *colly.HTMLElement) {
 			link := e.Request.AbsoluteURL(item.ChildAttr("a", "href"))
-			title := item.ChildText("a > p")
-			ctx := colly.NewContext()
-			ctx.Put("title", title)
+
 			// 传递数据给c2
-			c2.Request("GET", link, nil, ctx, nil)
+			c2.Visit(link)
 		})
 		// 翻页
 	})
@@ -44,8 +49,8 @@ func main() {
 	c2.OnHTML(`.content`, func(e *colly.HTMLElement) {
 		imgUrl := e.ChildAttr(`.pictures > .con_img`, "src")
 		pageIndex := e.ChildText(`.pages > span`)
-		filepath := e.Req
-		saveimg(e.Request.Ctx)
+		filepath := e.ChildText(`.title`)
+		saveimg(filepath, pageIndex, imgUrl)
 
 		nextDom := e.DOM.Find(".pages > a").Last()
 		if nextDom.Text() == "下一页" {
@@ -72,13 +77,14 @@ func main() {
 	c2.Wait()
 }
 
+// 图片保存
 func saveimg(filepath, filename, imgUrl string) {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println(r)
 		}
 	}()
-
+	filepath = "/run/media/bayo/DATA/DATA/PIC/" + filepath
 	// 读取字节流
 	req, err := http.NewRequest("GET", imgUrl, nil)
 	if err != nil {
@@ -95,8 +101,8 @@ func saveimg(filepath, filename, imgUrl string) {
 
 	// 创建文件夹
 	_ = os.MkdirAll(filepath, os.ModePerm)
-
-	out, err := os.Create(filepath + "/" + filename + ".jpg")
+	lastIndex := strings.LastIndex(imgUrl, ".")
+	out, err := os.Create(filepath + "/" + filename + imgUrl[lastIndex:len(imgUrl)-1])
 	if err != nil {
 		panic(err)
 	}
