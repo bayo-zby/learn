@@ -1,18 +1,14 @@
 # github.com/PuerkitoBio/goquery v1.6.1
-## explicit
 github.com/PuerkitoBio/goquery
 # github.com/andybalholm/cascadia v1.1.0
 github.com/andybalholm/cascadia
 # github.com/antchfx/htmlquery v1.2.3
-## explicit
 github.com/antchfx/htmlquery
 # github.com/antchfx/xmlquery v1.3.6
-## explicit
 github.com/antchfx/xmlquery
 # github.com/antchfx/xpath v1.1.10
 github.com/antchfx/xpath
 # github.com/gobwas/glob v0.2.3
-## explicit
 github.com/gobwas/glob
 github.com/gobwas/glob/compiler
 github.com/gobwas/glob/match
@@ -22,26 +18,20 @@ github.com/gobwas/glob/syntax/lexer
 github.com/gobwas/glob/util/runes
 github.com/gobwas/glob/util/strings
 # github.com/gocolly/colly v1.2.0
-## explicit
 github.com/gocolly/colly
 github.com/gocolly/colly/debug
-github.com/gocolly/colly/proxy
 github.com/gocolly/colly/storage
 # github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 github.com/golang/groupcache/lru
 # github.com/golang/protobuf v1.3.1
 github.com/golang/protobuf/proto
 # github.com/kennygrant/sanitize v1.2.4
-## explicit
 github.com/kennygrant/sanitize
 # github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca
-## explicit
 github.com/saintfish/chardet
 # github.com/temoto/robotstxt v1.1.2
-## explicit
 github.com/temoto/robotstxt
-# golang.org/x/net v0.0.0-20210420072503-d25e30425868
-## explicit
+# golang.org/x/net v0.0.0-20210421230115-4e50805a0758
 golang.org/x/net/context
 golang.org/x/net/html
 golang.org/x/net/html/atom
@@ -65,7 +55,6 @@ golang.org/x/text/language
 golang.org/x/text/runes
 golang.org/x/text/transform
 # google.golang.org/appengine v1.6.7
-## explicit
 google.golang.org/appengine/internal
 google.golang.org/appengine/internal/base
 google.golang.org/appengine/internal/datastore

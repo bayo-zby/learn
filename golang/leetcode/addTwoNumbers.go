@@ -11,20 +11,24 @@ package leetcode
 var ch = make(chan struct{})
 
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	head := &ListNode{}
+	// 哨兵
+	head := &ListNode{Val: 99}
 	recursionAdd(l1, l2, head)
 	<-ch
-	return head
+	return head.Next
 }
 
 func recursionAdd(l1 *ListNode, l2 *ListNode, tail *ListNode) {
 	// 考虑进位导致链表扩容的情况
 	if l1 == nil && l2 == nil {
-		// 清掉尾环
-		tail = nil
 		ch <- struct{}{}
 		return
 	}
+
+	if tail.Next == nil {
+		tail.Next = &ListNode{}
+	}
+	tail = tail.Next
 
 	// 取值
 	var n1, n2 int
@@ -40,8 +44,10 @@ func recursionAdd(l1 *ListNode, l2 *ListNode, tail *ListNode) {
 	sum := n1 + n2 + tail.Val
 	// 遗留数+当前循环值=当前累计值
 	tail.Val, sum = sum%10, sum/10
-	tail.Next = &ListNode{Val: sum}
+	if sum != 0 {
+		tail.Next = &ListNode{Val: sum}
+	}
 
 	//递归传递
-	go recursionAdd(l1, l2, tail.Next)
+	go recursionAdd(l1, l2, tail)
 }
