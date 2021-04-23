@@ -1,6 +1,6 @@
-package sequnce
+package sort
 
-// @ program:gitee/learn/golang/algorithm/sequance
+// @ program:go/src/learn/golang/algorithm/sort
 // @ author:bayo
 // @ create:2021-04-22 15:00
 
@@ -9,7 +9,7 @@ package sequnce
 */
 
 /* 选择排序
-funcname:SelectSequence
+funcname:SelectSort
 input:
 	@ param :arrInt []int,输入数组
 out:
@@ -18,7 +18,7 @@ description:
 	使用原地置换算法，进行选择排序
 	复杂度为O(n2)
 */
-func SelectSequence(arrInt []int) []int {
+func SelectSort(arrInt []int) []int {
 	for i := 0; i < len(arrInt); i++ {
 		var index = i
 		for j := i + 1; j < len(arrInt); j++ {
