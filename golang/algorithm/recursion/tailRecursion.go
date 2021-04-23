@@ -1,4 +1,4 @@
-package main
+package recursion
 
 import "fmt"
 
@@ -13,7 +13,7 @@ func test(num int, res int, ch chan int) {
 	go test(num-1, res+num, ch)
 }
 
-func main() {
+func TestRecursion() {
 	ch := make(chan int)
 	test(4, 0, ch)
 	answer := <-ch
