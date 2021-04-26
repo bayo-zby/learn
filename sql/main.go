@@ -11,9 +11,13 @@ type Product struct {
 	Price uint
 }
 
+const (
+	MYSQL_SSH = "root:123/test?charset=utf8&parseTime=True&loc=Local"
+)
+
 func main() {
 	db, err := gorm.Open(
-		mysql.Open("root:123/test?charset=utf8&parseTime=True&loc=Local"),
+		mysql.Open(MYSQL_SSH),
 		&gorm.Config{},
 	)
 	if err != nil {
