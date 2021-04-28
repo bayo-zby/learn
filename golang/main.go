@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"learn/goweb/middleware/simhash"
+	"learn/golang/leetcode"
+	"unsafe"
 )
 
 func main() {
-	str := simhash.WordWeight("我来到北京清华大学")
-	fmt.Println(str)
+	res := leetcode.CountPrimeEratothenes(5)
+	fmt.Println(res)
+	fmt.Println(unsafe.Sizeof(1))
 }
