@@ -2,12 +2,17 @@ package main
 
 import (
 	"fmt"
-	"learn/golang/leetcode"
-	"unsafe"
+	"math"
 )
 
 func main() {
-	res := leetcode.CountPrimeEratothenes(5)
-	fmt.Println(res)
-	fmt.Println(unsafe.Sizeof(1))
 }
+
+
+func maxSubArray(nums []int) int{
+	for i := range(1, len(nums)):
+		nums[i] += max(nums[i - 1], 0)
+	return max(nums)
+}
+
+	
