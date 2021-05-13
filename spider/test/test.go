@@ -15,11 +15,11 @@ func main() {
 
 	// req.Header.Add("User-Agent","curl/1.7")
 
-	t := &http.Transport{Proxy: url.Parse("http://hexin:hx300033@119.97.156.72:888")}
+	// t := &http.Transport{Proxy: ("http://hexin:hx300033@119.97.156.72:888")}
 
 	client := &http.Client{
 		// CheckRedirect: red,
-		Transport: t,
+		// Transport: t,
 	}
 
 	resp, err := client.Do(req)

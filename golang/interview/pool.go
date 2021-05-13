@@ -3,7 +3,6 @@ package interview
 type Pool struct {
 	queue chan *func()  // 任务队列
 	done  chan struct{} // 池开关
-	ctx
 }
 
 func NewPool(size int) *Pool {

@@ -17,7 +17,8 @@ func Rotate(nums []int, k int) {
 	copy(nums, res)
 }
 
-// 原地置换
-func Rotate2(nums []int, k int) {
-
+// 重建数组，移动相当于溢出部分的数组拼接到未溢出部分之后
+func ReverseLeftWords(s string, n int) string {
+	n = n % len(s)
+	return s[n:] + s[:n]
 }
