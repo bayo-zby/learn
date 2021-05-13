@@ -4,8 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains as AC
 from selenium.webdriver.support import expected_conditions as EC
-import time
-# import pandas as pd
+import pandas as pd
 
 def new_driver():
     """
@@ -86,17 +85,21 @@ class fangdiSpdier():
             f.write(driver.page_source)
         
         with open(self.path + "cookies.txt","w") as f:
-            f.writelines(driver.get_cookie())
+            f.writelines(driver.get_cookies())
 
-
-
+    
+    
+def getUrl(filepath):
+    """
+    @param filepath,文件路径
+    @ret    list,链接列表
+    """
+    data = pd.read_excel(filepath,header=None)
+    return [i for i in data[1]]
 
 if __name__ == "__main__":
-    url_list = [
-        "http://www.fangdi.com.cn/new_house/more_info.html?project_id=c90bb18e9dda0ff9&building_id=54393757b6a130d65f4f10816e5ff473&start_id=04d8b992394ab666",
-        "http://www.fangdi.com.cn/new_house/more_info.html?project_id=d0370fc302b06582&building_id=10d7b60946bbdcd28a045eb1690b4806&start_id=14ab23415ba59319",
-    ]
-    
+    url_list = getUrl('爬虫岗测试题url.xlsx')
     spider = fangdiSpdier(url_list)
     spider.do()
-    
+    print(url_list)
+
