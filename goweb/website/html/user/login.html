@@ -1,52 +1,18 @@
 {{define "user/login.html"}}
 <!DOCTYPE html>
-<html>
-	<link rel="stylesheet" href="/static/css/login.css"/>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>登录</title>  
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
 </head>
 <body>
-	<div id="login-box">
-		<h1>Login</h1>
-		<div class="form">
-			<div class="item">
-			   <i class="fa fa-github-alt" style="font-size:24px"></i>
-			   <input type="text" placeholder="Username" id="username">		   
-			</div>
-			<div class="item">
-			   <i class="fa fa-search" style="font-size:24px"></i>
-			   <input type="text" placeholder="Password" id="passwd">
-			</div>
-		</div>
-		<button id="login_but" type="submit">Login</button>
-	</div>
-	<script>
-		var login = document.getElementById("login_but")
-		login.onclick = function(){
-			var username = document.getElementById("username").value;
-			var passwd = document.getElementById("passwd").value;
-			$.ajax({
-				url:"/user/pass",
-				type:"POST",
-				data:{
-					"username":username,
-					"passwd":passwd,
-					"age":age,
-				},
-
-				// 回调
-				success:function(data){
-					alert(data["code"]);
-					alert(data["msg"]);
-				},
-				fail:function(data){
-
-				},
-			})
-		}
-	</script>
+	<form action="user/login" method="post">
+		<input type="text" name="username" placeholder="Username"> <br>
+		<input type="password" name="passwd" placeholder="Password"> <br>
+		<input type="submit" value="Login">
+	</form>
 </body>
 </html>
 {{end}}

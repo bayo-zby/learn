@@ -18,6 +18,7 @@ type queue struct {
 }
 
 type Pool struct {
+<<<<<<< HEAD
 	// 正在执行的任务队列
 	// 容量为cap,可以总限制池同时运行的协程数
 	taskWork chan struct{}
@@ -51,6 +52,10 @@ func (q *queue) Len() int {
  */
 func (p *Pool) Close() {
 	p.done <- struct{}{}
+=======
+	queue chan *func()  // 任务队列
+	done  chan struct{} // 池开关
+>>>>>>> 7df7f931a82d878c1a90e748661fe02ebab4a7be
 }
 
 /**

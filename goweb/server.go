@@ -12,21 +12,18 @@ func main() {
 	r.Static("website/static", "./static")
 
 	// 模板
-	r.LoadHTMLGlob("website/html/*/*")
+	// 引号包括文件，双引号仅包含目录
+	r.LoadHTMLGlob("website/html/**/*")
+	// 单独载入模板
+	// r.LoadHTMLFiles("website/html/index.html")
 
 	// 载入首页
-	r.Any("/", index)
+	r.Any("/", func(c *gin.Context) {
+		c.HTML(200, "index/index.html", nil)
+	})
 
-	// 分组页面
+	// 载入分组页面
 	handler.Router(r)
 
 	r.Run() //:80
-}
-
-/*
- *	首页
- */
-func index(ctx *gin.Context) {
-	name := ctx.DefaultQuery("name", "GUEST")
-	ctx.HTML(200, "index.html", name)
 }

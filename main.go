@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+<<<<<<< HEAD
 	a := []int{1, 1, 4, 5, 6, 2, 2, 2, 2, 2, 2}
 	fmt.Println(majorityElement(a))
 }
@@ -25,4 +26,23 @@ func majorityElement(nums []int) int {
 		}
 	}
 	return slice[0]
+=======
+	nums := []int{2, 2, 3, 2}
+	fmt.Println(singleNumber(nums))
+}
+
+func singleNumber(nums []int) int {
+	var ans int32
+	for i := 0; i < 32; i++ {
+		var b int32
+		for _, num := range nums {
+			// 将每位数字累加
+			b += int32(num) >> i & 1
+		}
+		if n := b % 3; n != 0 {
+			ans += n << i
+		}
+	}
+	return int(ans)
+>>>>>>> 7df7f931a82d878c1a90e748661fe02ebab4a7be
 }
