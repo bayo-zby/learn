@@ -11,7 +11,7 @@ type ans struct {
 }
 
 var strtrArr = []ans{
-	ans{"asdasda", "sda", 2},
+	{"asdasda", "sda", 1},
 }
 
 func TestStrstr(t *testing.T) {

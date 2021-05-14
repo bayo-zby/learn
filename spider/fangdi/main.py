@@ -15,7 +15,7 @@ def new_driver():
     driver = webdriver.Chrome("./chromedriver",options=option)
 
     # 设置代理
-    # proxy = ""
+    # proxy = "http://110.73.2.248:8123"
     # option.add_argument('--proxy-server=%s'%PROXY)
     
     # 隐藏webdriver属性
@@ -31,7 +31,7 @@ class fangdiSpdier():
     def __init__(self, url_list, time=3, path="./"):
         self.url_list = url_list # 链接集合
         self.time = time # 默认重试次数
-        self.path = "./"
+        self.path = path
 
     def request(self,url):
         """
@@ -56,7 +56,6 @@ class fangdiSpdier():
 
     def retry(self,driver,time):
         """
-        无内容递归重传
         """
         # 临界值
         if time <= 0 :
@@ -84,8 +83,8 @@ class fangdiSpdier():
         with open(self.path + filename + '.html','w') as f:
             f.write(driver.page_source)
         
-        with open(self.path + "cookies.txt","w") as f:
-            f.writelines(driver.get_cookies())
+        # with open(self.path + "cookies.txt","w") as f:
+        #     f.writelines(driver.get_cookies())
 
     
     
@@ -98,7 +97,7 @@ def getUrl(filepath):
     return [i for i in data[1]]
 
 if __name__ == "__main__":
-    url_list = getUrl('爬虫岗测试题url.xlsx')
+    url_list = getUrl('url.xlsx')
     spider = fangdiSpdier(url_list)
     spider.do()
     print(url_list)
