@@ -2,11 +2,15 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"net/http"
+	"net/url"
 )
 
 func main() {
+<<<<<<< HEAD
+	queryUrl := url.Values{}
+	queryUrl.Add("q", `拖鞋`)
+	fmt.Println(queryUrl.Encode())
+=======
 	const url = "http://www.i618.com.cn/gsyw/zcgl/qxcp/productSZ9122/zgcpjs.shtml"
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -33,4 +37,5 @@ func main() {
 	}
 
 	fmt.Println(string(body))
+>>>>>>> 7df7f931a82d878c1a90e748661fe02ebab4a7be
 }

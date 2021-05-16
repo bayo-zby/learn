@@ -9,15 +9,15 @@ import os,json
 from datetime import datetime
 # import random
 
-def new_driver():
+def new_driver(proxy=""):
     """
     创建新driver对象
     """
     option = webdriver.ChromeOptions()
     option.add_experimental_option('excludeSwitches', ['enable-automation']) # 取消信息栏
-    # option.add_argument('--headless')     # 无头模式
-    # option.add_argument('--start-maximized') # 最大化
-    # option.add_argument(f'--proxy-server={self.proxy}') # 设置代理
+    option.add_argument('--headless')     # 无头模式
+    option.add_argument('--start-maximized') # 最大化
+    if proxy: option.add_argument(f'--proxy-server={proxy}') # 设置代理
     driver = webdriver.Chrome("./chromedriver",options=option) 
 
     # 隐藏webdriver属性,跳过检测
@@ -68,7 +68,9 @@ class fangdiSpdier():
         self.writer_log("TRACK",f"访问链接：{url}")
         while self.time >= retry:
             self.writer_log("TRACK",f"第{retry}次尝试")
+            # 随机代理位置
             self.driver = new_driver()
+            
             self.driver.get(url)
             cookie = self.set_cookies() # 载入cookie
             if self.webwait(): 
@@ -172,10 +174,7 @@ def getUrl(filepath):
     return [i for i in data]
 
 if __name__ == "__main__":
-    # url = 'http://www.fangdi.com.cn/'
-
     url_list = getUrl('url.xlsx')
-    # url_list = ['http://www.fangdi.com.cn/new_house/new_house_list.html?districtID=27d3af3bd45acf5e&houseAreaID=0&houseTypeID=0&dicAvgpriceID=0']
     spider = fangdiSpdier(url_list)
     spider.do()
 

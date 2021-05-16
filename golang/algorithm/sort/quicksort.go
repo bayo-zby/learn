@@ -12,6 +12,7 @@ func QuickSort(sInt []int) []int {
 	if len(sInt) < 2 {
 		return sInt
 	}
+	// 中轴条件
 	pivot := sInt[0]
 	var less, res, greater []int
 	res = append(res, pivot)
