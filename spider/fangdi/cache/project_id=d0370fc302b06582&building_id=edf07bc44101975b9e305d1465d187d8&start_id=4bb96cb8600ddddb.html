@@ -1,0 +1,436 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>网上房地产</title>
+    <link rel="icon" type="image/x-icon/" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/idangerous.swiper2.7.6.css">
+    <!-- 阿里图标字体 -->
+    <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css">
+    <!--[if lt IE 9]><script r='m'>document.createElement("section")</script><![endif]--><script type="text/javascript" src="../layui/lay/dest/layui.all.js"></script><link id="layuicss-laydatecss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/laydate/laydate.css" media="all"><link id="layuicss-skinlayercss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/layer/default/layer.css?v=3.0.3303" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/code.css" media="all">
+    <script type="text/javascript" src="../scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../plugins/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="../plugins/idangerous.swiper.progress.min.js"></script>
+    <!-- 用于填充不支持的CSS选择器和属性,包括重要的 last-child -->
+    <!--[if lte IE 8]><script type="text/javascript" src="../scripts/selectivizr.js"></script><![endif]-->
+</head>
+
+<body style="">
+    <!-- 公共 顶部 -->
+    <div class="head">
+
+
+<div class="layout clearfix top_wrapper" id="top_wrapper_bg">
+    <div class="f_left">
+        <a href="../index.html" class="logo_wrapper">
+            <img src="/img/logo.jpg" style="width:180px;border:0;">
+            <img src="/img/962269top.png" style="border:0;width:100px">
+            <!-- <span>房地产交易服务网</span> -->
+        </a>
+        
+        
+    </div>
+    <div class="f_right">
+    </div>
+</div>
+<script>
+
+/*
+ * 首页顶部图片新闻切换
+ * 
+ * 通过数组长度循环显示图片和新闻内容
+ * 
+ * */
+var timeInterval=5000;
+var b = 0;
+var img = new Array();
+img[0] = "/img/head_bg.png";
+img[1] = "/img/head_bg2.png";
+
+
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有3张图片放在img文件夹下。
+setInterval(changeTopImg,timeInterval);
+
+
+function changeTopImg(){
+	var imgID = document.getElementById("top_wrapper_bg");
+	
+	if(b == img.length -1){
+		b = 0;
+	}else{
+		b += 1;
+	}
+	$("#top_wrapper_bg").css("background","url(\""+ img[b] +"\") no-repeat");
+	
+}
+</script>
+</div>
+    <!-- 公共 菜单 -->
+    <div class="menu">
+
+<div class="layout menu_wrapper">
+	<a href="/index.html">首页</a>
+	<a href="/new_house/new_house.html" class="active">一手房</a>
+	<a href="/old_house/old_house.html">二手房</a>
+	<a href="/lease/lease.html">房屋租赁</a>
+	<a href="/trade/trade.html">交易统计</a>
+	<a href="/honor/honor.html">资质诚信</a>
+	<a href="/service/service.html">服务指南</a>
+	<a href="/about/about.html">关于我们</a>
+</div>
+
+<script type="text/javascript">
+	$(document).on("scroll",function(){
+		var v_content = $(document).scrollTop();
+		if (v_content > 68) {
+			$(".menu").addClass("p_fixed")
+			$(".menu").removeClass("p_relative")
+		}else{
+			$(".menu").addClass("p_relative")
+			$(".menu").removeClass("p_fixed")
+		}
+	})
+</script></div>
+    <!-- 首页主体内容 -->
+    <div class="content_box">
+        <div class="layout content">
+            <div class="banner">
+
+
+<script>
+/* var mybanner = new Swiper('.banner-container', {
+    autoplay: 4000, //可选选项，自动滑动
+    loop: true, //可选选项，开启循环
+    pagination : '.pagination',
+    paginationClickable :true,
+}) */
+</script>
+</div>
+            <div class="crumbs_nav top20">
+                <div class="current_place">
+                    <span>当前位置:</span><a href="./new_house.html">一手房</a>--&gt;<a href="#">项目详细信息</a>--&gt;<a href="#">户列表</a>
+                </div>
+            </div>
+            <div class="hu_wrapper top20">
+                <h3 class="hu_tit" id="building_name">新世界花园 中山南一路500弄7号</h3>
+                <h6 class="direct_tips clearfix">
+                    <div class="f_left">
+                        <span class="tips_color _yellow mytest"><i class="iconfont icon-square"></i>已签</span>
+                        <span class="tips_color _red"><i class="iconfont icon-square"></i>已登记</span>
+                        <span class="tips_color _green"><i class="iconfont icon-square"></i>可售</span>
+                        <span class="tips_color _pinhong"><i class="iconfont icon-square"></i>已付定金</span>
+                        <span class="tips_color _white"><i class="iconfont icon-square"></i>未纳入网上销售</span>
+                        <span class="tips_color color666"><i class="iconfont icon-square"></i>“灰色”属于其它开盘单元</span>
+                    </div>
+                    <div class="f_right">
+                        <span class="tips_sign"><i class="iconfont icon-yuan"></i>动迁房</span>
+                        <span class="tips_sign"><i class="iconfont icon-wujiaoxing"></i>配套商品房</span>
+                        <span class="tips_sign"><i class="iconfont icon-sanjiaoxing-copy"></i>动迁安置房</span>
+                    </div>
+                </h6>
+                <h5 class="direct_lay lan clearfix"><span class="fact_lay f_left">实际层</span><i>室号</i></h5>
+                <div class="multi_lay" id="moreInfo"> <div class="lay1"> 	<div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">1</td>	<td class="_white_bg ">1层储藏</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">2</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e746223ab385495ccc">201</td>	<td class="_white_bg ">2层丙类储藏</td>	<td class="_white_bg ">2层物业管理用房</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">3</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7bd9c93ad85f8ded0">301</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e766a93b88cba6ae7b">302</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e778ed959bf407f029">303</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7f9c4e066afda18ad">305</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7b8c8d3d781a50c39">306</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">4</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7809bc42ba9dc439e">501</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ab94a10f2791e215">502</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e7a5567389f460583f"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e7a5567389f460583f&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">503</a></td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77657c5583fe943bf">505</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e70a0d1f74b4ded3c9">506</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">5</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7826d5a2c5d0d60ad">601</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76847c5d2e5c7c677">602</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7bf9f8d48d349933f">603</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ae70243da2a1184b">605</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7863d495ac541a3c2">606</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">6</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e79c9c58bfeadf4b25">701</td>	<td class="_yellow_bg  mytest" name="96fadcffb4b472e7edcf9f7a25c31af2">702</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76c2af2ca76a3be31">703</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e71d51804c540cf670">705</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7fa26aa926fecacab">706</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">7</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e762aa18e8367f673a"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e762aa18e8367f673a&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">801</a></td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75051a3bfd9b785c9">802</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e777bc6a6a17e4cffc">803</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7a9922b5ebc603eeb">805</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7fa8686a7062381d1">806</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">8</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7bfd002486ffc60c4">901</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e78396986b49b835ae">902</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e78e6efe0b09414c9a">903</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c97f3db674104027">905</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76bed34a395f5b0bf">906</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">9</td>	<td class="_yellow_bg  mytest" name="96fadcffb4b472e721299e6549a53af8">1001</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e766481a046e84ff87">1002</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7a734df117ece5191">1003</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e778ed14762fda9f21">1005</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ce5f3db0632dff94">1006</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">10</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ba2831f785adb8c7">1101</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e79a9f944ff4f10183">1102</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e73890da892db80130">1103</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e74325d56e00855652">1105</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77ca30320499794b7">1106</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">11</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e71584c0424d17db60">1201</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7a3f5dbbf34a4abcb">1202</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e72a535ac6f22dcbce">1203</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77988204357f10421">1205</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e78113e970084d7a49">1206</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">12</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e730cb943726b3152f">1501</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7d65a1635bc83283d">1502</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ca16c1c34eb4ee89">1503</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7fd50a6a8f3b49187">1505</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e775d2ea6e19667f72"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e775d2ea6e19667f72&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">1506</a></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">13</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75ba1875c6c407322">1601</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7dfc27aa295cf4e8d">1602</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7118ac01bba8fd9e3">1603</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e782ee808acd284210"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e782ee808acd284210&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">1605</a></td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7d256a938ab92ac10">1606</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">14</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c4d02c3896531851">1701</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e724b876e5ee867271">1702</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ada78da9cb0bc41e">1703</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e777b136c62f457a74">1705</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e777a15edcd079a188">1706</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">15</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7e9d14030d4e57643">1801</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77105261743e0621d">1802</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7b17ac12d43dacb58">1803</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7cb06888b9a5f9660">1805</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c1734601982bb693">1806</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">16</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7dac3825d27290be4">1901</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e764a1068792390738">1902</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77a7e3ce47fd84470">1903</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7b8a07b6419582a4d">1905</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7b13d638d8dea0b03">1906</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">17</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e79a4a184176ce909b">2001</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7e6533b2d30161a50">2002</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e790af598a12d5d1ec">2003</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7fa3451bbad8d50e5">2005</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e71c357d60821042af">2006</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">18</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e73274f930e4fcf7a7">2101</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e710940badb58b65c3">2102</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7b10918d6ad7df291">2103</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7914ce65d3d144652">2105</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e7c3f9d1dacccdcffe"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e7c3f9d1dacccdcffe&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">2106</a></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">19</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76607230f15b674f2">2201</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e789eb5afe24e3df4b">2202</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c8f134227c65f403">2203</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7bef74fa50ddc7858">2205</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76e8d611c7ebe76a1">2206</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">20</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7ef90a4ef98aee3b1">2301</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7627ebf2caca3285c">2302</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7f4e41200661b3e55">2303</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e797390b951807ba40">2305</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7eb01a7ecb537492c">2306</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">21</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7f07895fc42fabb54">2501</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c5edffc49a7b4dae">2502</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7e0c99ca6741caaf3">2503</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e790cf7ee62e938754">2505</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7c73ed59e0900651f">2506</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">22</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7fbf8d3dbec8da263">2601</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7141f0b8118d2088c">2602</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7e8a52c2931e2c9d2">2603</td>	<td class="_yellow_bg  mytest" name="96fadcffb4b472e7726e326c83bd8ce0">2605</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e774d5bc8e4b4a9d18">2606</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">23</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7dd05c3637d13b182">2701</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e72ea1e7376a5aff8b">2702</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7cb51ea80b3a92cce">2703</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75085fc3c23984d82">2705</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e79e2973fb1976714a">2706</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">24</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75239013b30379347">2801</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7862ac23d66a8c1ad">2802</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75df2ecf51be55cef">2803</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7783e8859bbe4e936">2805</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e79f4c6d3a5f9f4e26">2806</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">25</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e771316b8550955661">2901</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7bd4afeaca9a1d0d0">2902</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e708beee7540e7f472">2903</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e73831f443066c9b38"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e73831f443066c9b38&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">2905</a></td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77bf5f68bac79cfd8">2906</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">26</td>	<td class="_yellow_bg  mytest" name="96fadcffb4b472e757aa945d07ae6890">3001</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e703e49a2f5889b0e6">3002</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e75f31725d024519ef">3003</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7f088dc308a066972">3005</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7295d1a4b15185d0d">3006</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">27</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e723ea91b27a68dbfb">3101</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7412ca6e101f59f3d">3102</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7f0275359866b3cab">3103</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e73c86b339f37ff39f">3105</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e77aab071c87336989">3106</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">28</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7784306815e33b9ad">3201</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76e3c8e22da8f1153">3202</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e7853e9be385458b60">3203</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e74830618eae415fc2">3205</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e70ed678155e8b823c">3206</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center">29</td>	<td class="_yellow_bg  mytest" name="96fadcffb4b472e7449767ff892d6b50">3301</td>	<td class="_green_bg  mytest" name="96fadcffb4b472e7d206a75b12bf020b"><a href="./new_house_list_detail.html?house_id=96fadcffb4b472e7d206a75b12bf020b&amp;project_id=d0370fc302b06582&amp;building_id=edf07bc44101975b9e305d1465d187d8">3302</a></td>	<td class="_red_bg  mytest" name="96fadcffb4b472e76ef8a889189476d8">3303</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e781fdfc63c9e35978">3305</td>	<td class="_red_bg  mytest" name="96fadcffb4b472e73e6fd075c0d52ec6">3306</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody>  </table><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="8" align="center"></td>	<td class="_white_bg ">1层架空</td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td>	<td calss=""><p style="color:#CDCDCD;"></p></td> </tr> 	 </tbody> </table></div></div>
+            </div>
+        </div>
+    </div>
+    <!-- 公共 底部 -->
+    <div class="foot top20">
+
+<style>
+.foot_link_right input{
+border:1px solid #626161;color:#333;
+}
+</style>
+<script type="text/javascript">
+<!--
+function show(){
+	window.open("http://www.shjjw.gov.cn");
+}
+//-->
+</script>
+<div class="foot_wrapper">
+    <div class="foot_link">
+        <div class="layout clearfix">
+            <div class="f_left foot_link_left">
+                <a href="/about/about.html">关于我们</a>
+                <a href="/service/site_nav.html">站点导航</a>
+<!--                <a href="">联系我们</a>
+                <a href="">法律声明</a>-->
+            </div>
+             <div class="f_right foot_link_right" style="width:230px;">
+                <div class="">
+                    <select name="city" lay-verify="" onchange="show()">
+                        <option value="">相关链接</option>
+                       <option value="http://www.shjjw.gov.cn">上海市住房和城乡建设管理委员会</option>
+                    </select>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot_desc">
+        <div class="layout clearfix">
+            <div class="f_left foot_desc_left">
+            	<p>
+            		CopyRight (c) 2011-2018 Shanghai Real Estate Trading Center
+            	</p>
+            	<p>
+            		版权所有：上海市房地产交易中心
+            	</p>
+            </div>
+            <div class="f_right foot_desc_right">
+            	<span><img src="/img/bei.jpg"><i>沪ICP备 17041557</i></span>
+            </div>
+            <div class="f_right foot_desc_right">
+			<a href="//bszs.conac.cn/sitename?method=show&amp;id=54A24443ACDC2C1FE053022819ACA28C" target="_blank">
+				<img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="./layui/lay/dest/layui.all.js"></script> -->
+</div>
+    <div class="side_bar"></div>
+    <script>
+    var path;
+    var param;
+    $(function() {
+    	var pathName = document.location.pathname;   
+	    var index = pathName.substr(1).indexOf("/");   
+		path = pathName.substr(0,index+1);  
+		if(path!="wsfdc" && path!="/wsfdc")
+			path = "";
+        // 头部
+        $.ajax({
+            url: "../modules/top.jsp",
+            success: function(x) {
+                $(".head").html(x);
+                // 返回顶部
+            }
+        });
+        // 菜单
+        $.ajax({
+            url: "../modules/menu.jsp",
+            success: function(x) {
+                $(".menu").html(x);
+                $(".menu_wrapper a").eq(1).addClass("active")
+                // 返回顶部
+            }
+        });
+        // banner
+        $.ajax({
+            url: "../modules/banner.jsp",
+            success: function(x) {
+                $(".banner").html(x);
+                // 返回顶部
+            }
+        });
+        // foot
+        $.ajax({
+            url: "../modules/foot.jsp",
+            success: function(x) {
+                $(".foot").html(x);
+                // 返回顶部
+            }
+        });
+        // 边栏
+        $.ajax({
+            url: "../modules/side_bar.html",
+            success: function(x) {
+                $(".side_bar").html(x);
+                // 返回顶部
+            }
+        });
+        // 环间成交统计切换结束
+        layui.use(['layer', 'form', 'element'], function() {
+            var layer = layui.layer,
+                form = layui.form(),
+                element = layui.element();
+            //……
+            //你的代码都应该写在这里面
+            var buildingID = decodeURI(request.QueryString('building_id'));
+            var startID = decodeURI(request.QueryString('start_id'));
+			param = {buildingID:buildingID,startID:startID};
+        });
+        
+        $.ajax({
+			type : "POST",
+			contentType : "application/x-www-form-urlencoded;charset=utf-8",
+			url : path+"/service/freshHouse/queryBuildingById.action",
+			data:{projectID:request.QueryString('project_id'),buildingID:request.QueryString('building_id')},
+			dataType : "json",
+			success : function(data){
+			var strArr = [];
+			var project = data.project;
+			var building = data.building;
+			if (project){
+				//项目基本信息
+				$('#building_name').text(project['projectname']+" "+building['building_name']);
+			}
+			},error : function(){
+				
+			}
+		});
+        $.ajax({
+			type : "POST",
+			contentType : "application/x-www-form-urlencoded;charset=utf-8",
+			url : path+"/service/freshHouse/getMoreInfo.action",
+			data: param,
+			dataType : "json",
+			success : function(data){
+				var moreInfoList = data.moreInfoList;
+				var page = data.page;
+				var strArr = [];
+				
+				for (var key in moreInfoList) { 
+					strArr.push(' <div class="lay1">');
+					strArr.push(' 	<table class="layui-table colorfull_table">');
+					strArr.push(' 	 <colgroup>');
+					strArr.push(' 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115">');
+					strArr.push(' 		<col width="115"><col width="115"><col width="115"><col width="115">');
+					strArr.push('  	 </colgroup>');
+					strArr.push(' 	 <tbody>');
+					strArr.push(' <tr>');
+	                strArr.push(' 	<td rowspan="'+moreInfoList[key].length+'" align="center">'+key+'</td>');
+	                var number = 0;
+	                var k = '';
+					$.each(moreInfoList[key],function(moreIndex,moremap){
+							var status = moremap['status'];
+							var house_type = moremap['house_type'];
+							if (number > 7){
+								strArr.push(' </tr>');
+								strArr.push(' <tr>');
+								if (k!=key){
+									strArr.push(' 	<td rowspan="'+moreInfoList[key].length+'" align="center">'+key+'</td>');
+								}
+								number = 0;
+							}
+							
+							if (status == 2){
+								var calStr = '_yellow_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'">'+moremap['room_number']+'</td>');
+							}else if(status == 3){
+								var calStr = '_red_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'">'+moremap['room_number']+'</td>');
+							}else if(status == 4){
+								var calStr = '_green_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'"><a href="./new_house_list_detail.html?house_id='+moremap['house_id']+'&project_id='+request.QueryString('project_id')+'&building_id='+request.QueryString('building_id')+'">'+moremap['room_number']+'</a></td>');
+							}else if(status == 8){
+								var calStr = '_pinhong_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+'">'+moremap['room_number']+'</td>');
+							}else if(status == 9){
+								var calStr = '_white_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+'">'+moremap['room_number']+'</td>');
+							}else {
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td calss="'+Iconfont+'"><p style="color:#CDCDCD;">'+moremap['room_number']+'</p></td>');
+							}
+							number++;
+							k = key;
+					});
+					strArr.push(' </tr>');
+					strArr.push(' 	 </tbody>');
+					strArr.push(' </div>');
+				}
+				
+				$('#moreInfo').html(strArr.join(''));
+			},
+			error : function(){
+				
+			}
+		});
+		var tip_index = 0;
+		$("#moreInfo").on("mouseenter","._green_bg,._yellow_bg,._red_bg", function(){
+			var house_id = $(this).attr('name');
+			var plan_flarea = 0;
+			var flarea = 0;
+			$.ajax({
+				type : "POST",
+				contentType : "application/x-www-form-urlencoded;charset=utf-8",
+				url : path+"/service/freshHouse/queryHouseById.action",
+				data:{'houseID':house_id},
+				dataType : "json",
+				async: false,
+				success : function(data){
+					var houseDetailList = data.houseDetailList;
+					if (houseDetailList.length > 0){
+						var houseDetail = houseDetailList[0];
+						if (houseDetail['plan_flarea'])
+							plan_flarea = houseDetail['plan_flarea'];
+						if (houseDetail['flarea'])
+							flarea = houseDetail['flarea'];
+					}
+				},
+				error : function(){
+					
+				}
+			});
+			tip_index = layer.tips('预测面积：'+plan_flarea+'</br>实测面积：'+flarea+'', this, {
+						  tips: [2, '#78BA32']
+			});
+		});
+		$("#moreInfo").on("mouseleave","._green_bg", function(){
+			layer.close(tip_index);
+		});
+    })
+    
+    //自定义字典对象
+	function Dictionary(){
+  		this.data = new Array();
+  
+  		this.put = function(key,value){
+   			this.data[key] = value;
+  		};	
+  		
+  		this.get = function(key){
+   			return this.data[key];
+  		};
+  		
+  		this.remove = function(key){
+   			this.data[key] = null;
+  		};
+  		
+  		this.isEmpty = function(){
+   			return this.data.length == 0;
+  		};
+
+  		this.size = function(){
+   			return this.data.length;
+  		};
+ 	}
+    function GetDisplayIconfont(house_type){
+    	var calStr = '';
+    	switch (house_type) {
+			case 1:
+				calStr = 'iconfont icon-yuan-wwy';	
+				break;
+			case 2:
+				calStr = 'iconfont icon-wujiaoxing-wwy';	
+				break;
+			case 11:
+				calStr = 'iconfont icon-sanjiaoxing-copy-wwy';
+			default:
+				break;
+			}
+		return calStr;
+    }
+    //静态页面获参数值
+	var request = 
+	　　{ 
+	　　	QueryString : function(val) { 
+		　　var uri = window.location.search; 
+		　　var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
+		　　return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+	　　	} 
+	　}
+    </script>
+
+
+</body></html>

@@ -1,0 +1,436 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>网上房地产</title>
+    <link rel="icon" type="image/x-icon/" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/idangerous.swiper2.7.6.css">
+    <!-- 阿里图标字体 -->
+    <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css">
+    <!--[if lt IE 9]><script r='m'>document.createElement("section")</script><![endif]--><script type="text/javascript" src="../layui/lay/dest/layui.all.js"></script><link id="layuicss-laydatecss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/laydate/laydate.css" media="all"><link id="layuicss-skinlayercss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/layer/default/layer.css?v=3.0.3303" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="http://www.fangdi.com.cn/layui/css/modules/code.css" media="all">
+    <script type="text/javascript" src="../scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../plugins/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="../plugins/idangerous.swiper.progress.min.js"></script>
+    <!-- 用于填充不支持的CSS选择器和属性,包括重要的 last-child -->
+    <!--[if lte IE 8]><script type="text/javascript" src="../scripts/selectivizr.js"></script><![endif]-->
+</head>
+
+<body style="">
+    <!-- 公共 顶部 -->
+    <div class="head">
+
+
+<div class="layout clearfix top_wrapper" id="top_wrapper_bg" style="background: url(&quot;/img/head_bg2.png&quot;) no-repeat;">
+    <div class="f_left">
+        <a href="../index.html" class="logo_wrapper">
+            <img src="/img/logo.jpg" style="width:180px;border:0;">
+            <img src="/img/962269top.png" style="border:0;width:100px">
+            <!-- <span>房地产交易服务网</span> -->
+        </a>
+        
+        
+    </div>
+    <div class="f_right">
+    </div>
+</div>
+<script>
+
+/*
+ * 首页顶部图片新闻切换
+ * 
+ * 通过数组长度循环显示图片和新闻内容
+ * 
+ * */
+var timeInterval=5000;
+var b = 0;
+var img = new Array();
+img[0] = "/img/head_bg.png";
+img[1] = "/img/head_bg2.png";
+
+
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有3张图片放在img文件夹下。
+setInterval(changeTopImg,timeInterval);
+
+
+function changeTopImg(){
+	var imgID = document.getElementById("top_wrapper_bg");
+	
+	if(b == img.length -1){
+		b = 0;
+	}else{
+		b += 1;
+	}
+	$("#top_wrapper_bg").css("background","url(\""+ img[b] +"\") no-repeat");
+	
+}
+</script>
+</div>
+    <!-- 公共 菜单 -->
+    <div class="menu">
+
+<div class="layout menu_wrapper">
+	<a href="/index.html">首页</a>
+	<a href="/new_house/new_house.html" class="active">一手房</a>
+	<a href="/old_house/old_house.html">二手房</a>
+	<a href="/lease/lease.html">房屋租赁</a>
+	<a href="/trade/trade.html">交易统计</a>
+	<a href="/honor/honor.html">资质诚信</a>
+	<a href="/service/service.html">服务指南</a>
+	<a href="/about/about.html">关于我们</a>
+</div>
+
+<script type="text/javascript">
+	$(document).on("scroll",function(){
+		var v_content = $(document).scrollTop();
+		if (v_content > 68) {
+			$(".menu").addClass("p_fixed")
+			$(".menu").removeClass("p_relative")
+		}else{
+			$(".menu").addClass("p_relative")
+			$(".menu").removeClass("p_fixed")
+		}
+	})
+</script></div>
+    <!-- 首页主体内容 -->
+    <div class="content_box">
+        <div class="layout content">
+            <div class="banner">
+
+
+<script>
+/* var mybanner = new Swiper('.banner-container', {
+    autoplay: 4000, //可选选项，自动滑动
+    loop: true, //可选选项，开启循环
+    pagination : '.pagination',
+    paginationClickable :true,
+}) */
+</script>
+</div>
+            <div class="crumbs_nav top20">
+                <div class="current_place">
+                    <span>当前位置:</span><a href="./new_house.html">一手房</a>--&gt;<a href="#">项目详细信息</a>--&gt;<a href="#">户列表</a>
+                </div>
+            </div>
+            <div class="hu_wrapper top20">
+                <h3 class="hu_tit" id="building_name">新世界花园 中山南一路500弄16-18（地下）号</h3>
+                <h6 class="direct_tips clearfix">
+                    <div class="f_left">
+                        <span class="tips_color _yellow mytest"><i class="iconfont icon-square"></i>已签</span>
+                        <span class="tips_color _red"><i class="iconfont icon-square"></i>已登记</span>
+                        <span class="tips_color _green"><i class="iconfont icon-square"></i>可售</span>
+                        <span class="tips_color _pinhong"><i class="iconfont icon-square"></i>已付定金</span>
+                        <span class="tips_color _white"><i class="iconfont icon-square"></i>未纳入网上销售</span>
+                        <span class="tips_color color666"><i class="iconfont icon-square"></i>“灰色”属于其它开盘单元</span>
+                    </div>
+                    <div class="f_right">
+                        <span class="tips_sign"><i class="iconfont icon-yuan"></i>动迁房</span>
+                        <span class="tips_sign"><i class="iconfont icon-wujiaoxing"></i>配套商品房</span>
+                        <span class="tips_sign"><i class="iconfont icon-sanjiaoxing-copy"></i>动迁安置房</span>
+                    </div>
+                </h6>
+                <h5 class="direct_lay lan clearfix"><span class="fact_lay f_left">实际层</span><i>室号</i></h5>
+                <div class="multi_lay" id="moreInfo"> <div class="lay1"> 	<div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="97" align="center">-3</td>	<td class="_white_bg ">地下3层1601</td>	<td class="_white_bg ">地下3层1602</td>	<td class="_white_bg ">地下3层1701</td>	<td class="_white_bg ">地下3层1702</td>	<td class="_white_bg ">地下3层1703</td>	<td class="_white_bg ">地下3层1704</td>	<td class="_white_bg ">地下3层1801</td>	<td class="_white_bg ">地下3层1802</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b489cb4b1dc3b9256ec">地下3层车位6163（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b480df2cc18cdaf4f9e">地下3层车位6164（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b04daef621d9b43c">地下3层车位6165</td>	<td class="_red_bg  mytest" name="723092f7ea887b48fd03bf02833dc7ce">地下3层车位6166</td>	<td class="_red_bg  mytest" name="723092f7ea887b485351553fb85a65b4">地下3层车位6167</td>	<td class="_red_bg  mytest" name="723092f7ea887b483e801de50b475575">地下3层车位6168</td>	<td class="_red_bg  mytest" name="723092f7ea887b48f38c1408d940ecbf">地下3层车位6169</td>	<td class="_red_bg  mytest" name="723092f7ea887b48542b291bc20306a2">地下3层车位6170</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b481cf440822f229814">地下3层车位6171</td>	<td class="_red_bg  mytest" name="723092f7ea887b48c1d6fbbc4124fc1a">地下3层车位6172</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b70323159245c86a">地下3层车位6173</td>	<td class="_red_bg  mytest" name="723092f7ea887b48cf2fdf9b7353226f">地下3层车位6174</td>	<td class="_red_bg  mytest" name="723092f7ea887b48fad404a71970acd9">地下3层车位6175</td>	<td class="_red_bg  mytest" name="723092f7ea887b4846b306b3c5339942">地下3层车位6176</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b865f6874538648f">地下3层车位6177</td>	<td class="_red_bg  mytest" name="723092f7ea887b484f0a199647030eab">地下3层车位6178（无障碍）</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b48de3b15eb5c10ba3d">地下3层车位6179（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b484d4a149053c07a43">地下3层车位6180</td>	<td class="_red_bg  mytest" name="723092f7ea887b48857770c0ba6b4f84">地下3层车位6181</td>	<td class="_red_bg  mytest" name="723092f7ea887b4871b36245da10151e">地下3层车位6182</td>	<td class="_red_bg  mytest" name="723092f7ea887b483313f907e9af9f8d">地下3层车位6183</td>	<td class="_red_bg  mytest" name="723092f7ea887b48dfd1bae690f48293">地下3层车位6184</td>	<td class="_red_bg  mytest" name="723092f7ea887b48fe858c6ecc545802">地下3层车位6185</td>	<td class="_red_bg  mytest" name="723092f7ea887b483b8c5e7be0395a1b">地下3层车位6186</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b48a0d1bfa9bcb921a8">地下3层车位6187</td>	<td class="_red_bg  mytest" name="723092f7ea887b48f46ef02483aa4bcd">地下3层车位6188</td>	<td class="_red_bg  mytest" name="723092f7ea887b482b7b557fc1dee8c2">地下3层车位6189</td>	<td class="_red_bg  mytest" name="723092f7ea887b48791564e5ad07864c">地下3层车位6190</td>	<td class="_red_bg  mytest" name="723092f7ea887b483fed4be1f1cc0e77">地下3层车位6191</td>	<td class="_red_bg  mytest" name="723092f7ea887b48515b78e8863d514c">地下3层车位6192</td>	<td class="_red_bg  mytest" name="723092f7ea887b48dc039212daf5a009">地下3层车位6193</td>	<td class="_red_bg  mytest" name="723092f7ea887b48ed2341d4f45ad8df">地下3层车位6194</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b4826a059c9b6793aa2">地下3层车位6195</td>	<td class="_red_bg  mytest" name="723092f7ea887b487906b0d79d42c881">地下3层车位6196</td>	<td class="_red_bg  mytest" name="723092f7ea887b48d6622ae71c816e72">地下3层车位6197</td>	<td class="_red_bg  mytest" name="723092f7ea887b48ca9fea3cc9e7bb89">地下3层车位6198</td>	<td class="_red_bg  mytest" name="723092f7ea887b489f2642ba9e640d4a">地下3层车位6199</td>	<td class="_red_bg  mytest" name="723092f7ea887b485df1675df28cfbbf">地下3层车位6200</td>	<td class="_red_bg  mytest" name="723092f7ea887b482c8014f448b28ead">地下3层车位6201</td>	<td class="_red_bg  mytest" name="723092f7ea887b486dd18888ddc4ea96">地下3层车位6202（无障碍）</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b4838be2516adb17d9a">地下3层车位6203</td>	<td class="_red_bg  mytest" name="723092f7ea887b486da900be05bb8c8f">地下3层车位6204</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b52349145b38c853">地下3层车位6205</td>	<td class="_red_bg  mytest" name="723092f7ea887b48012d0eee5a48c96e">地下3层车位6206</td>	<td class="_red_bg  mytest" name="723092f7ea887b487509536742e10da1">地下3层车位6207</td>	<td class="_red_bg  mytest" name="723092f7ea887b48cafabe3500b6d527">地下3层车位6208</td>	<td class="_red_bg  mytest" name="723092f7ea887b48187310315978e91f">地下3层车位6209</td>	<td class="_red_bg  mytest" name="723092f7ea887b4858b1ae4eabe15918">地下3层车位6210（无障碍）</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b48540d107bdbbd2c65">地下3层车位6211（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b4851dd67ceaad70ea8">地下3层车位6212</td>	<td class="_red_bg  mytest" name="723092f7ea887b48c8c43ec022a1fc11">地下3层车位6213</td>	<td class="_red_bg  mytest" name="723092f7ea887b48ebcbae90eba35d23">地下3层车位6214</td>	<td class="_red_bg  mytest" name="723092f7ea887b48edfc43c6911260cc">地下3层车位6215</td>	<td class="_red_bg  mytest" name="723092f7ea887b483f0678ce893f8e45">地下3层车位6216</td>	<td class="_red_bg  mytest" name="723092f7ea887b486ef4acbe780ce8cb">地下3层车位6217</td>	<td class="_red_bg  mytest" name="723092f7ea887b4802f16f22fef5c9d4">地下3层车位6218</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b485117509a830f2e4d">地下3层车位6219</td>	<td class="_red_bg  mytest" name="723092f7ea887b482530271d387c464e">地下3层车位6220</td>	<td class="_red_bg  mytest" name="723092f7ea887b48aa600105394c44bd">地下3层车位6221</td>	<td class="_red_bg  mytest" name="723092f7ea887b48a778648ec1e70b7a">地下3层车位6222</td>	<td class="_red_bg  mytest" name="723092f7ea887b48255a862c7e1213a0">地下3层车位6223</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b89f01aa34aae722">地下3层车位6224</td>	<td class="_red_bg  mytest" name="723092f7ea887b48dda2c13fac08e5bd">地下3层车位6225</td>	<td class="_red_bg  mytest" name="723092f7ea887b489718ad2fd8c5fac6">地下3层车位6226</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b4820699f48b676cdd1">地下3层车位6227</td>	<td class="_red_bg  mytest" name="723092f7ea887b4892bb7befba77ea91">地下3层车位6228</td>	<td class="_red_bg  mytest" name="723092f7ea887b489f6afeb6273d8f3d">地下3层车位6229</td>	<td class="_red_bg  mytest" name="723092f7ea887b48e668e00a08c3183a">地下3层车位6230</td>	<td class="_red_bg  mytest" name="723092f7ea887b4863fd128f36b79ecc">地下3层车位6231</td>	<td class="_red_bg  mytest" name="723092f7ea887b48e304e9dd537eed1a">地下3层车位6232</td>	<td class="_red_bg  mytest" name="723092f7ea887b489d89099c16408620">地下3层车位6233</td>	<td class="_red_bg  mytest" name="723092f7ea887b48910ae117732b8d02">地下3层车位6234</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b480c76dce489a8e571">地下3层车位6235</td>	<td class="_red_bg  mytest" name="723092f7ea887b4880d0ba71efc05a3c">地下3层车位6236</td>	<td class="_red_bg  mytest" name="723092f7ea887b48d652c1af5bc6512c">地下3层车位6237</td>	<td class="_red_bg  mytest" name="723092f7ea887b482efe821d393f11cb">地下3层车位6238</td>	<td class="_red_bg  mytest" name="723092f7ea887b48b66beafb1f144441">地下3层车位6239</td>	<td class="_red_bg  mytest" name="723092f7ea887b484eb1db2b456c9b28">地下3层车位6240</td>	<td class="_red_bg  mytest" name="723092f7ea887b482c91871118bea93d">地下3层车位6241</td>	<td class="_red_bg  mytest" name="723092f7ea887b48852aeb73978daa65">地下3层车位6242</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b48c1ec5f1d4a8d4e60">地下3层车位6243</td>	<td class="_red_bg  mytest" name="723092f7ea887b488ec0d698c1235ad8">地下3层车位6244（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b482ddc96b741e78b92">地下3层车位6245</td>	<td class="_red_bg  mytest" name="723092f7ea887b480d6870e5cd3a64eb">地下3层车位6246（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b482286a246ea2c0aa6">地下3层车位6247（无障碍）</td>	<td class="_red_bg  mytest" name="723092f7ea887b481d1ed4684e0a33fb">地下3层车位6248</td>	<td class="_red_bg  mytest" name="723092f7ea887b486dfad8224c1681ca">地下3层车位6249</td>	<td class="_white_bg ">地下3层检修空间</td> </tr> <tr>	<td class="_white_bg ">地下3层生活水泵房</td> </tr> 	 </tbody>  </table><div class="lay1"> 	</div><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="99" align="center">-2</td>	<td class="_white_bg ">地下2层1601</td>	<td class="_white_bg ">地下2层1602</td>	<td class="_white_bg ">地下2层1701</td>	<td class="_white_bg ">地下2层1702</td>	<td class="_white_bg ">地下2层1703</td>	<td class="_white_bg ">地下2层1704</td>	<td class="_white_bg ">地下2层1801</td>	<td class="_white_bg ">地下2层1802</td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b485a3d0b579a88b17f"><a href="./new_house_list_detail.html?house_id=723092f7ea887b485a3d0b579a88b17f&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6074（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4810e462a571a66562"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4810e462a571a66562&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6075</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ea43831a5582d61a"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ea43831a5582d61a&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6076</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4810b2bf3a8edec536"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4810b2bf3a8edec536&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6077</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48e64115a605988017"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48e64115a605988017&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6078</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b488157e1eefd826ed2"><a href="./new_house_list_detail.html?house_id=723092f7ea887b488157e1eefd826ed2&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6079</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4850afcf29a3297ef6"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4850afcf29a3297ef6&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6080</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48cba6bddf389cc738"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48cba6bddf389cc738&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6081</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48fd8a5f62c5de8f4a"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fd8a5f62c5de8f4a&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6082</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a8a01dc22ac69920"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a8a01dc22ac69920&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6083</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ff6435fc2f73dbeb"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ff6435fc2f73dbeb&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6084</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a10a795c619773a2"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a10a795c619773a2&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6085</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fc5e6939fed5cda7"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fc5e6939fed5cda7&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6086</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48d0e2de4a22b9f8dd"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d0e2de4a22b9f8dd&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6087</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4898ddad0d5b3ab7a1"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4898ddad0d5b3ab7a1&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6088</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48efc896f887eb06fb"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48efc896f887eb06fb&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6089</a></td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b48d07fd12d05fe3f51">地下2层车位6090</td>	<td class="_green_bg  mytest" name="723092f7ea887b48059bdbf9bf667f51"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48059bdbf9bf667f51&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6091</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4820dfb784beb149e2"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4820dfb784beb149e2&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6092</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a0e7bd928ef71dc1"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a0e7bd928ef71dc1&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6093</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48d22b04a9d52fb8b6"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d22b04a9d52fb8b6&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6094</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ae076404a4c8d859"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ae076404a4c8d859&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6095</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48eb6486a664430e92"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48eb6486a664430e92&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6096</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b486b24fdea86476579"><a href="./new_house_list_detail.html?house_id=723092f7ea887b486b24fdea86476579&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6097</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b481059219fd4692dba"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481059219fd4692dba&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6098</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48bf378b42b8829b73"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48bf378b42b8829b73&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6099</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48088b82409195621e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48088b82409195621e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6100</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4846495eb4a25c8526"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4846495eb4a25c8526&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6101</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48282a0fa460a18e5d">地下2层车位6102</td>	<td class="_green_bg  mytest" name="723092f7ea887b48d062d35ab5523187"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d062d35ab5523187&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6103</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4837e14612dcdecfec"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4837e14612dcdecfec&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6104</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48109382ecc524e1b1">地下2层车位6105</td> </tr> <tr>	<td class="_yellow_bg  mytest" name="723092f7ea887b489688564f55cf1fab">地下2层车位6106</td>	<td class="_green_bg  mytest" name="723092f7ea887b4808b72b3330efdf68"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4808b72b3330efdf68&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6107</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4860275365f2f853d7"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4860275365f2f853d7&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6108</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4887e2bfa0ed0d5229"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4887e2bfa0ed0d5229&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6109</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48f97b20d975e721cc"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48f97b20d975e721cc&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6110</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b487a55c0da0e144540"><a href="./new_house_list_detail.html?house_id=723092f7ea887b487a55c0da0e144540&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6111</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b481c51507a2109fb8d"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481c51507a2109fb8d&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6112</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4823c67bbe7408d0d0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4823c67bbe7408d0d0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6113（无障碍）</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48266542533fc58452"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48266542533fc58452&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6114（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a80044d189e5ab74"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a80044d189e5ab74&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6115</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4812f8505756b8bf0a"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4812f8505756b8bf0a&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6116</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b480c22eae010872dfe"><a href="./new_house_list_detail.html?house_id=723092f7ea887b480c22eae010872dfe&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6117</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48409cdf548d2d9983"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48409cdf548d2d9983&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6118</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a68a909d79f0e503"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a68a909d79f0e503&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6119</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b4827ef3048a12834ac">地下2层车位6120</td>	<td class="_green_bg  mytest" name="723092f7ea887b48f8e129a9556fec14"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48f8e129a9556fec14&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6121</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b4858e1728aa62662ad"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4858e1728aa62662ad&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6122</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b488243fe77151ecb70"><a href="./new_house_list_detail.html?house_id=723092f7ea887b488243fe77151ecb70&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6123（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48b74d1bfd2b237ed0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48b74d1bfd2b237ed0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6124（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48107290cf63cf9440"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48107290cf63cf9440&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6125</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b486ca3b38d67e9589e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b486ca3b38d67e9589e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6126</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b481bc60cf62bd15db1"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481bc60cf62bd15db1&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6127</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48cc4ca5d4b165afcc"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48cc4ca5d4b165afcc&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6128</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4888904139c6b79d71"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4888904139c6b79d71&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6129</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48b420c8c4561de6c9"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48b420c8c4561de6c9&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6130</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b483c6f18e1b8ae5c39"><a href="./new_house_list_detail.html?house_id=723092f7ea887b483c6f18e1b8ae5c39&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6131</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48033283173d76ce21"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48033283173d76ce21&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6132</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b482e0ee1e54699909c"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482e0ee1e54699909c&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6133</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48c18acf1c74499d04"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48c18acf1c74499d04&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6134</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fe74790d86438878"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fe74790d86438878&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6135</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48dfe5e51617eb18ec"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48dfe5e51617eb18ec&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6136</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b485f0ead11b74f2f4e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b485f0ead11b74f2f4e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6137</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b4829fb565736644717"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4829fb565736644717&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6138</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b485943caa308a747fb"><a href="./new_house_list_detail.html?house_id=723092f7ea887b485943caa308a747fb&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6139</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4821eebcd11f8d70cf"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4821eebcd11f8d70cf&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6140</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48bcc9266fadc7c5b4"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48bcc9266fadc7c5b4&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6141</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fb0cb42187720226"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fb0cb42187720226&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6142</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fdb0e1017dc1386f"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fdb0e1017dc1386f&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6143</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48c6b715f9279d2dd4"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48c6b715f9279d2dd4&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6144</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48cf52eb5327896b64"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48cf52eb5327896b64&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6145</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48477642b568888f8b"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48477642b568888f8b&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6146</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ef0fedbf181a8a1e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ef0fedbf181a8a1e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6147</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fa89e9e59a077e77"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fa89e9e59a077e77&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6148</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b480cd8a38f4743ec16"><a href="./new_house_list_detail.html?house_id=723092f7ea887b480cd8a38f4743ec16&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6149</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48d3db28a39e6ee80f"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d3db28a39e6ee80f&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6150</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b486fded79b074e7901"><a href="./new_house_list_detail.html?house_id=723092f7ea887b486fded79b074e7901&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6151</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4870c2a481dfcbd5a1"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4870c2a481dfcbd5a1&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6152</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b482d03975fe291ce19"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482d03975fe291ce19&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6153</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48b9a8173b9bd9e0ea"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48b9a8173b9bd9e0ea&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6154</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b487b5d97cf06bc68fe"><a href="./new_house_list_detail.html?house_id=723092f7ea887b487b5d97cf06bc68fe&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6155</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48d452cb4e6d00183d"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d452cb4e6d00183d&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6156</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48213b4849e150008e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48213b4849e150008e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6157</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4878f5bd4ad67a6534"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4878f5bd4ad67a6534&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6158</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4892734a6c278f84d0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4892734a6c278f84d0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6159（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b481160b021e4d59b67"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481160b021e4d59b67&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6160（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b488014302e821110df"><a href="./new_house_list_detail.html?house_id=723092f7ea887b488014302e821110df&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6161</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b483e7b08a44bed3115"><a href="./new_house_list_detail.html?house_id=723092f7ea887b483e7b08a44bed3115&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下2层车位6162（无障碍）</a></td>	<td class="_white_bg ">地下2层检修空间</td>	<td class="_white_bg ">地下2层排烟</td> </tr> 	 </tbody>  </table><table class="layui-table colorfull_table"> 	 <colgroup> 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115"> 		<col width="115"><col width="115"><col width="115"><col width="115">  	 </colgroup> 	 <tbody> <tr> 	<td rowspan="85" align="center">-1</td>	<td class="_white_bg ">地下1层1601</td>	<td class="_white_bg ">地下1层1602</td>	<td class="_white_bg ">地下1层1701</td>	<td class="_white_bg ">地下1层1702</td>	<td class="_white_bg ">地下1层1703</td>	<td class="_white_bg ">地下1层1704</td>	<td class="_white_bg ">地下1层1801</td>	<td class="_white_bg ">地下1层1802</td> </tr> <tr>	<td class="_white_bg ">地下1层1号PT站</td>	<td class="_green_bg  mytest" name="c8a9190ad7db73559d49d4e05862ce3b"><a href="./new_house_list_detail.html?house_id=c8a9190ad7db73559d49d4e05862ce3b&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6001</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48b839010bd74e4dc6"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48b839010bd74e4dc6&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6002</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48817bd36c3b0444d3">地下1层车位6003</td>	<td class="_green_bg  mytest" name="723092f7ea887b48ed4016345673511b"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ed4016345673511b&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6004</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48887c5ac3fbaa2e0f"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48887c5ac3fbaa2e0f&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6005</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48cd75a685e4cc74b5"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48cd75a685e4cc74b5&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6006</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48576982595fa651ae"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48576982595fa651ae&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6007</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b482a3627b93363607d"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482a3627b93363607d&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6008</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b482de9c44807476e6a"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482de9c44807476e6a&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6009</a></td>	<td class="_green_bg  mytest" name="c8a9190ad7db735567046b73b3e8e2e0"><a href="./new_house_list_detail.html?house_id=c8a9190ad7db735567046b73b3e8e2e0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6010</a></td>	<td class="_green_bg  mytest" name="c8a9190ad7db7355fbecca8d5db8bab1"><a href="./new_house_list_detail.html?house_id=c8a9190ad7db7355fbecca8d5db8bab1&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6011</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a72bfcd224014322"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a72bfcd224014322&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6012</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48692efcb0348bbaf9"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48692efcb0348bbaf9&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6013</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b481d50ff31b3a3da0d">地下1层车位6014</td>	<td class="_red_bg  mytest" name="723092f7ea887b48211382620ecf49b2">地下1层车位6015</td> </tr> <tr>	<td class="_red_bg  mytest" name="723092f7ea887b484ce7cec8e874ff2b">地下1层车位6016</td>	<td class="_green_bg  mytest" name="723092f7ea887b4877863b091746059b"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4877863b091746059b&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6017</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48e4c06ee5ba5dfab5"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48e4c06ee5ba5dfab5&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6018</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b480272c4ffdf0d5d0c"><a href="./new_house_list_detail.html?house_id=723092f7ea887b480272c4ffdf0d5d0c&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6019</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b486660fc2a4b9a9876"><a href="./new_house_list_detail.html?house_id=723092f7ea887b486660fc2a4b9a9876&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6020</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b487f6e51108731b3a7">地下1层车位6021</td>	<td class="_green_bg  mytest" name="723092f7ea887b4853538136fcd22725"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4853538136fcd22725&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6022</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b484c11c67a01110951">地下1层车位6023</td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b482a8320548432b8cb"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482a8320548432b8cb&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6024</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48c0453d8db913ca6c"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48c0453d8db913ca6c&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6025</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4895d288b5a324e442"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4895d288b5a324e442&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6026</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b489b0401a2dc48a4fa"><a href="./new_house_list_detail.html?house_id=723092f7ea887b489b0401a2dc48a4fa&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6027</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a11607d2fbc418be"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a11607d2fbc418be&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6028</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48f8d8edb657ce56f8"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48f8d8edb657ce56f8&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6029</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48057975e353ad3165"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48057975e353ad3165&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6030</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48f11ddf9d4f75aa56"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48f11ddf9d4f75aa56&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6031</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b487e3f851372e5976e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b487e3f851372e5976e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6032</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48f7a833a652a71f66">地下1层车位6033</td>	<td class="_yellow_bg  mytest" name="723092f7ea887b48777545f7c9f215a4">地下1层车位6034</td>	<td class="_green_bg  mytest" name="723092f7ea887b486b0c29e1c042a3cb"><a href="./new_house_list_detail.html?house_id=723092f7ea887b486b0c29e1c042a3cb&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6035</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4866363f3480de5603"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4866363f3480de5603&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6036</a></td>	<td class="_yellow_bg  mytest" name="723092f7ea887b48d7becb7df6477f44">地下1层车位6037</td>	<td class="_green_bg  mytest" name="723092f7ea887b48d1f0029693e445bf"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48d1f0029693e445bf&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6038</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4818fef6f65f869681"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4818fef6f65f869681&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6039</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b48aab250a33a7f6b13"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48aab250a33a7f6b13&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6040（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48315472b18ac3beb4"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48315472b18ac3beb4&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6041（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b484a9a42cadeaa59cc"><a href="./new_house_list_detail.html?house_id=723092f7ea887b484a9a42cadeaa59cc&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6042</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48f4a33a749bc9f94f"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48f4a33a749bc9f94f&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6043</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48964743303fc0f3f7"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48964743303fc0f3f7&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6044</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48a3bc78d5fe10592e"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48a3bc78d5fe10592e&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6045</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ca0bf1aa17c511a0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ca0bf1aa17c511a0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6046</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b482d10cd6c01e8c199"><a href="./new_house_list_detail.html?house_id=723092f7ea887b482d10cd6c01e8c199&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6047</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b489c68b10e7b3f754c"><a href="./new_house_list_detail.html?house_id=723092f7ea887b489c68b10e7b3f754c&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6048</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48fd098260684bea21"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48fd098260684bea21&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6049</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48520cf160930725d0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48520cf160930725d0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6050</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4825711025dd81392b"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4825711025dd81392b&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6051</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48e58b2d9b592f9ce4"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48e58b2d9b592f9ce4&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6052</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b485bf6bd3ab2d8b815"><a href="./new_house_list_detail.html?house_id=723092f7ea887b485bf6bd3ab2d8b815&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6053</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48aa38b9bd178d45a6"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48aa38b9bd178d45a6&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6054</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48ef0af247b75204e5">地下1层车位6055</td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b483fddb3893b346f52"><a href="./new_house_list_detail.html?house_id=723092f7ea887b483fddb3893b346f52&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6056</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4893c925ba5210c06d"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4893c925ba5210c06d&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6057</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48ec60252a478e2dba"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48ec60252a478e2dba&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6058</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48c2d0e2634a6a2a26"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48c2d0e2634a6a2a26&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6059</a></td>	<td class="_yellow_bg  mytest" name="723092f7ea887b48ae8270bb5e6676dc">地下1层车位6060</td>	<td class="_green_bg  mytest" name="723092f7ea887b481e9fbc0f0a6b6c84"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481e9fbc0f0a6b6c84&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6061</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4808ee7e70da8c33c6"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4808ee7e70da8c33c6&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6062</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b4843775adfe3e24804"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4843775adfe3e24804&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6063</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b489e095fc003d7b7a3"><a href="./new_house_list_detail.html?house_id=723092f7ea887b489e095fc003d7b7a3&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6064</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b483517dcde5f2f10ab"><a href="./new_house_list_detail.html?house_id=723092f7ea887b483517dcde5f2f10ab&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6065（无障碍）</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b48dcc9818778f394ce">地下1层车位6066</td>	<td class="_green_bg  mytest" name="723092f7ea887b481b5434d4dd7e4ea9"><a href="./new_house_list_detail.html?house_id=723092f7ea887b481b5434d4dd7e4ea9&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6067</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b480861e0e212af1386"><a href="./new_house_list_detail.html?house_id=723092f7ea887b480861e0e212af1386&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6068（无障碍）</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48c766ff8a1e175fab"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48c766ff8a1e175fab&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6069</a></td>	<td class="_red_bg  mytest" name="723092f7ea887b480e786230680e8e6a">地下1层车位6070（无障碍）</td>	<td class="_green_bg  mytest" name="723092f7ea887b4819f30c0fbecbb9b0"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4819f30c0fbecbb9b0&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6071（无障碍）</a></td> </tr> <tr>	<td class="_green_bg  mytest" name="723092f7ea887b4887302f9ba83e0ca7"><a href="./new_house_list_detail.html?house_id=723092f7ea887b4887302f9ba83e0ca7&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6072</a></td>	<td class="_green_bg  mytest" name="723092f7ea887b48e9be2d937113b9be"><a href="./new_house_list_detail.html?house_id=723092f7ea887b48e9be2d937113b9be&amp;project_id=d0370fc302b06582&amp;building_id=1af7ee484dfacd9f471dfe1a4089faae">地下1层车位6073</a></td>	<td class="_white_bg ">地下1层工具间</td>	<td class="_white_bg ">地下1层检修空间</td>	<td class="_white_bg ">地下1夹层检修空间</td> </tr> 	 </tbody> </table></div></div>
+            </div>
+        </div>
+    </div>
+    <!-- 公共 底部 -->
+    <div class="foot top20">
+
+<style>
+.foot_link_right input{
+border:1px solid #626161;color:#333;
+}
+</style>
+<script type="text/javascript">
+<!--
+function show(){
+	window.open("http://www.shjjw.gov.cn");
+}
+//-->
+</script>
+<div class="foot_wrapper">
+    <div class="foot_link">
+        <div class="layout clearfix">
+            <div class="f_left foot_link_left">
+                <a href="/about/about.html">关于我们</a>
+                <a href="/service/site_nav.html">站点导航</a>
+<!--                <a href="">联系我们</a>
+                <a href="">法律声明</a>-->
+            </div>
+             <div class="f_right foot_link_right" style="width:230px;">
+                <div class="">
+                    <select name="city" lay-verify="" onchange="show()">
+                        <option value="">相关链接</option>
+                       <option value="http://www.shjjw.gov.cn">上海市住房和城乡建设管理委员会</option>
+                    </select>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot_desc">
+        <div class="layout clearfix">
+            <div class="f_left foot_desc_left">
+            	<p>
+            		CopyRight (c) 2011-2018 Shanghai Real Estate Trading Center
+            	</p>
+            	<p>
+            		版权所有：上海市房地产交易中心
+            	</p>
+            </div>
+            <div class="f_right foot_desc_right">
+            	<span><img src="/img/bei.jpg"><i>沪ICP备 17041557</i></span>
+            </div>
+            <div class="f_right foot_desc_right">
+			<a href="//bszs.conac.cn/sitename?method=show&amp;id=54A24443ACDC2C1FE053022819ACA28C" target="_blank">
+				<img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="./layui/lay/dest/layui.all.js"></script> -->
+</div>
+    <div class="side_bar"></div>
+    <script>
+    var path;
+    var param;
+    $(function() {
+    	var pathName = document.location.pathname;   
+	    var index = pathName.substr(1).indexOf("/");   
+		path = pathName.substr(0,index+1);  
+		if(path!="wsfdc" && path!="/wsfdc")
+			path = "";
+        // 头部
+        $.ajax({
+            url: "../modules/top.jsp",
+            success: function(x) {
+                $(".head").html(x);
+                // 返回顶部
+            }
+        });
+        // 菜单
+        $.ajax({
+            url: "../modules/menu.jsp",
+            success: function(x) {
+                $(".menu").html(x);
+                $(".menu_wrapper a").eq(1).addClass("active")
+                // 返回顶部
+            }
+        });
+        // banner
+        $.ajax({
+            url: "../modules/banner.jsp",
+            success: function(x) {
+                $(".banner").html(x);
+                // 返回顶部
+            }
+        });
+        // foot
+        $.ajax({
+            url: "../modules/foot.jsp",
+            success: function(x) {
+                $(".foot").html(x);
+                // 返回顶部
+            }
+        });
+        // 边栏
+        $.ajax({
+            url: "../modules/side_bar.html",
+            success: function(x) {
+                $(".side_bar").html(x);
+                // 返回顶部
+            }
+        });
+        // 环间成交统计切换结束
+        layui.use(['layer', 'form', 'element'], function() {
+            var layer = layui.layer,
+                form = layui.form(),
+                element = layui.element();
+            //……
+            //你的代码都应该写在这里面
+            var buildingID = decodeURI(request.QueryString('building_id'));
+            var startID = decodeURI(request.QueryString('start_id'));
+			param = {buildingID:buildingID,startID:startID};
+        });
+        
+        $.ajax({
+			type : "POST",
+			contentType : "application/x-www-form-urlencoded;charset=utf-8",
+			url : path+"/service/freshHouse/queryBuildingById.action",
+			data:{projectID:request.QueryString('project_id'),buildingID:request.QueryString('building_id')},
+			dataType : "json",
+			success : function(data){
+			var strArr = [];
+			var project = data.project;
+			var building = data.building;
+			if (project){
+				//项目基本信息
+				$('#building_name').text(project['projectname']+" "+building['building_name']);
+			}
+			},error : function(){
+				
+			}
+		});
+        $.ajax({
+			type : "POST",
+			contentType : "application/x-www-form-urlencoded;charset=utf-8",
+			url : path+"/service/freshHouse/getMoreInfo.action",
+			data: param,
+			dataType : "json",
+			success : function(data){
+				var moreInfoList = data.moreInfoList;
+				var page = data.page;
+				var strArr = [];
+				
+				for (var key in moreInfoList) { 
+					strArr.push(' <div class="lay1">');
+					strArr.push(' 	<table class="layui-table colorfull_table">');
+					strArr.push(' 	 <colgroup>');
+					strArr.push(' 		<col width="70"><col width="115"><col width="115"><col width="115"><col width="115">');
+					strArr.push(' 		<col width="115"><col width="115"><col width="115"><col width="115">');
+					strArr.push('  	 </colgroup>');
+					strArr.push(' 	 <tbody>');
+					strArr.push(' <tr>');
+	                strArr.push(' 	<td rowspan="'+moreInfoList[key].length+'" align="center">'+key+'</td>');
+	                var number = 0;
+	                var k = '';
+					$.each(moreInfoList[key],function(moreIndex,moremap){
+							var status = moremap['status'];
+							var house_type = moremap['house_type'];
+							if (number > 7){
+								strArr.push(' </tr>');
+								strArr.push(' <tr>');
+								if (k!=key){
+									strArr.push(' 	<td rowspan="'+moreInfoList[key].length+'" align="center">'+key+'</td>');
+								}
+								number = 0;
+							}
+							
+							if (status == 2){
+								var calStr = '_yellow_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'">'+moremap['room_number']+'</td>');
+							}else if(status == 3){
+								var calStr = '_red_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'">'+moremap['room_number']+'</td>');
+							}else if(status == 4){
+								var calStr = '_green_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+' mytest" name="'+moremap['house_id']+'"><a href="./new_house_list_detail.html?house_id='+moremap['house_id']+'&project_id='+request.QueryString('project_id')+'&building_id='+request.QueryString('building_id')+'">'+moremap['room_number']+'</a></td>');
+							}else if(status == 8){
+								var calStr = '_pinhong_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+'">'+moremap['room_number']+'</td>');
+							}else if(status == 9){
+								var calStr = '_white_bg ';
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td class="'+(calStr+Iconfont)+'">'+moremap['room_number']+'</td>');
+							}else {
+								var Iconfont = GetDisplayIconfont(house_type);
+								strArr.push('	<td calss="'+Iconfont+'"><p style="color:#CDCDCD;">'+moremap['room_number']+'</p></td>');
+							}
+							number++;
+							k = key;
+					});
+					strArr.push(' </tr>');
+					strArr.push(' 	 </tbody>');
+					strArr.push(' </div>');
+				}
+				
+				$('#moreInfo').html(strArr.join(''));
+			},
+			error : function(){
+				
+			}
+		});
+		var tip_index = 0;
+		$("#moreInfo").on("mouseenter","._green_bg,._yellow_bg,._red_bg", function(){
+			var house_id = $(this).attr('name');
+			var plan_flarea = 0;
+			var flarea = 0;
+			$.ajax({
+				type : "POST",
+				contentType : "application/x-www-form-urlencoded;charset=utf-8",
+				url : path+"/service/freshHouse/queryHouseById.action",
+				data:{'houseID':house_id},
+				dataType : "json",
+				async: false,
+				success : function(data){
+					var houseDetailList = data.houseDetailList;
+					if (houseDetailList.length > 0){
+						var houseDetail = houseDetailList[0];
+						if (houseDetail['plan_flarea'])
+							plan_flarea = houseDetail['plan_flarea'];
+						if (houseDetail['flarea'])
+							flarea = houseDetail['flarea'];
+					}
+				},
+				error : function(){
+					
+				}
+			});
+			tip_index = layer.tips('预测面积：'+plan_flarea+'</br>实测面积：'+flarea+'', this, {
+						  tips: [2, '#78BA32']
+			});
+		});
+		$("#moreInfo").on("mouseleave","._green_bg", function(){
+			layer.close(tip_index);
+		});
+    })
+    
+    //自定义字典对象
+	function Dictionary(){
+  		this.data = new Array();
+  
+  		this.put = function(key,value){
+   			this.data[key] = value;
+  		};	
+  		
+  		this.get = function(key){
+   			return this.data[key];
+  		};
+  		
+  		this.remove = function(key){
+   			this.data[key] = null;
+  		};
+  		
+  		this.isEmpty = function(){
+   			return this.data.length == 0;
+  		};
+
+  		this.size = function(){
+   			return this.data.length;
+  		};
+ 	}
+    function GetDisplayIconfont(house_type){
+    	var calStr = '';
+    	switch (house_type) {
+			case 1:
+				calStr = 'iconfont icon-yuan-wwy';	
+				break;
+			case 2:
+				calStr = 'iconfont icon-wujiaoxing-wwy';	
+				break;
+			case 11:
+				calStr = 'iconfont icon-sanjiaoxing-copy-wwy';
+			default:
+				break;
+			}
+		return calStr;
+    }
+    //静态页面获参数值
+	var request = 
+	　　{ 
+	　　	QueryString : function(val) { 
+		　　var uri = window.location.search; 
+		　　var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
+		　　return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+	　　	} 
+	　}
+    </script>
+
+
+</body></html>
